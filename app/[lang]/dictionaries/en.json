@@ -1,0 +1,50 @@
+{
+  "titles": ["Software Engineer", "Coder", "Tech Enthusiast", "Content Creator"],
+  "about": {
+    "heading": "About",
+    "text": "Software Engineer with a focus on backend development, microservices architecture, and cloud infrastructure. I enjoy building scalable, reliable systems and contributing to teams that ship quality software."
+  },
+  "stack": {
+    "heading": "Tech Stack"
+  },
+  "newsletter": {
+    "heading": "Stay in the Loop",
+    "text": "Subscribe to get my latest posts on software engineering, backend architecture, and tech straight to your inbox.",
+    "cta": "Subscribe"
+  },
+  "experience": {
+    "heading": "Experience",
+    "entries": [
+      {
+        "title": "Software Engineer II",
+        "company": "Command Alkon",
+        "period": "Nov 2024 – Present",
+        "location": "Remote"
+      },
+      {
+        "title": "NodeJS Developer",
+        "company": "Globant",
+        "period": "May 2024 – Nov 2024",
+        "location": "Hybrid"
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "Crossroads Group LLC",
+        "period": "Aug 2023 – May 2024",
+        "location": "Remote"
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "Fulltimeforce",
+        "period": "Sep 2022 – May 2024",
+        "location": "Remote"
+      },
+      {
+        "title": "Software Developer",
+        "company": "Zero to One SAS",
+        "period": "Apr 2021 – Oct 2022",
+        "location": "Cali, Colombia"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "titles": ["Ingeniero de Software", "Programador", "Entusiasta Tech", "Creador de Contenido"],
+  "about": {
+    "heading": "Sobre mí",
+    "text": "Ingeniero de Software enfocado en desarrollo backend, arquitectura de microservicios e infraestructura en la nube. Disfruto construir sistemas escalables y confiables, y contribuir a equipos que entregan software de calidad."
+  },
+  "stack": {
+    "heading": "Stack Tecnológico"
+  },
+  "newsletter": {
+    "heading": "Mantente al día",
+    "text": "Suscríbete para recibir mis últimos posts sobre ingeniería de software, arquitectura backend y tecnología directo a tu correo.",
+    "cta": "Suscribirse"
+  },
+  "experience": {
+    "heading": "Experiencia",
+    "entries": [
+      {
+        "title": "Software Engineer II",
+        "company": "Command Alkon",
+        "period": "Nov 2024 – Presente",
+        "location": "Remoto"
+      },
+      {
+        "title": "NodeJS Developer",
+        "company": "Globant",
+        "period": "May 2024 – Nov 2024",
+        "location": "Híbrido"
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "Crossroads Group LLC",
+        "period": "Ago 2023 – May 2024",
+        "location": "Remoto"
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "Fulltimeforce",
+        "period": "Sep 2022 – May 2024",
+        "location": "Remoto"
+      },
+      {
+        "title": "Software Developer",
+        "company": "Zero to One SAS",
+        "period": "Abr 2021 – Oct 2022",
+        "location": "Cali, Colombia"
+      }
+    ]
+  }
+}
