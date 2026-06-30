@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# juanguzman.co
+
+My personal website and portfolio — a bilingual (English / Spanish) single-page site
+built with the Next.js App Router. It showcases my work as a software engineer:
+a short bio, tech stack, an experience timeline, and links to my socials and newsletter.
+
+🔗 **Live:** [juanguzman.co](https://juanguzman.co)
+
+## Tech Stack
+
+- **[Next.js 16](https://nextjs.org)** — App Router, React 19, TypeScript (strict mode)
+- **[Tailwind CSS 4](https://tailwindcss.com)** — via `@tailwindcss/postcss`, using the `@theme inline` directive
+- **Internationalization** — locale-based routing (`/en`, `/es`) with JSON dictionaries
+- **Fonts** — Space Grotesk (headings) + DM Sans (body), via `next/font/google`
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) — you'll be redirected to your
+preferred locale (`/en` or `/es`) based on your browser's `Accept-Language` header.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start the development server      |
+| `npm run build` | Production build                  |
+| `npm run start` | Serve the production build        |
+| `npm run lint`  | Run ESLint (core-web-vitals + TS) |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  [lang]/
+    page.tsx              # Home page (composed from sections)
+    layout.tsx            # Root layout + fonts
+    dictionaries.ts       # Loads the active locale dictionary
+    dictionaries/
+      en.json             # English content
+      es.json             # Spanish content
+  components/
+    LangSwitcher.tsx      # EN / ES toggle
+    Timeline.tsx          # Experience timeline
+    TypeWriter.tsx        # Animated title rotation
+  globals.css             # Tailwind theme + global styles
+proxy.ts                  # Locale detection & redirect
+brand/                    # Brand assets and guidelines
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All site copy lives in `app/[lang]/dictionaries/{en,es}.json`, so updating content
+(titles, about text, experience entries) doesn't require touching components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Internationalization
 
-## Deploy on Vercel
+Requests without a locale prefix are redirected to the best match by `proxy.ts`,
+which reads the `Accept-Language` header and falls back to English. Supported
+locales: `en`, `es`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Personal project — all rights reserved. Feel free to draw inspiration, but please
+don't republish the content or assets as your own.
