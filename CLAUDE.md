@@ -15,7 +15,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **Next.js 16.2** with App Router (React 19, TypeScript, strict mode)
 - **Tailwind CSS 4** via `@tailwindcss/postcss` plugin (uses `@theme inline` directive in globals.css)
-- **Fonts**: Geist Sans + Geist Mono loaded via `next/font/google`
+- **Fonts**: Space Grotesk (headings) + DM Sans (body) loaded via `next/font/google`
+- **MDX** via `@next/mdx` (plugins passed as strings for Turbopack); posts export `metadata` instead of frontmatter
 - Path alias: `@/*` maps to project root
 
 ## Brand Guidelines (brand/brand.md)
@@ -34,4 +35,8 @@ Brand images: `brand/portrait.png`, `brand/experience.png`
 
 ## Architecture
 
-Single-layout App Router project. All pages live under `app/` with a shared root layout (`app/layout.tsx`). Global styles in `app/globals.css` define CSS custom properties consumed by Tailwind's `@theme inline` block.
+The root layout is `app/[lang]/layout.tsx` (there is no `app/layout.tsx`); it renders the shared Header/Footer. `proxy.ts` redirects locale-less paths to `/en` or `/es`. Locales live in `lib/i18n.ts`, UI copy in `app/[lang]/dictionaries/*.json`.
+
+Blog posts are `content/blog/<lang>/<slug>.mdx`; `lib/posts.ts` lists them with `fs` and dynamically imports each module for its `metadata` export. A matching slug in both language folders marks a translation. All blog routes, RSS feeds, and OG images are statically generated.
+
+Global styles in `app/globals.css` define CSS custom properties consumed by Tailwind's `@theme inline` block; long-form content uses `prose prose-invert prose-brand` (`@tailwindcss/typography`).

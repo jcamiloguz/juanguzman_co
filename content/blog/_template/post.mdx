@@ -1,0 +1,44 @@
+{/*
+  Post template — never published (only content/blog/en and content/blog/es are read).
+  Copy this file to content/blog/<lang>/<slug>.mdx to start a new post.
+  It also keeps the build working while the blog has no posts.
+*/}
+
+export const metadata = {
+  title: "Post title",
+  description: "One-sentence summary shown in lists, previews and the RSS feed.",
+  date: "2026-01-01",
+  tags: ["backend"],
+  // cover: "/blog/<slug>/cover.png",
+  // substackUrl: "https://juanguzmn.substack.com/p/<slug>",
+  draft: true,
+}
+
+Intro paragraph with **bold**, _italics_, `inline code` and a [link](/en/about).
+
+## A section
+
+<Callout>A highlighted note.</Callout>
+
+<Callout emoji="⚠️">A warning with a custom icon.</Callout>
+
+```ts title="retry.ts" {3}
+async function withRetry<T>(fn: () => Promise<T>, attempts = 3): Promise<T> {
+  try {
+    return await fn(); // highlighted line
+  } catch (error) {
+    if (attempts <= 1) throw error;
+    return withRetry(fn, attempts - 1);
+  }
+}
+```
+
+| Option | When to use |
+| ------ | ----------- |
+| A      | Simple case |
+| B      | Edge case   |
+
+- [x] Task lists
+- [ ] work too
+
+> Blockquotes for quotes or key takeaways.
