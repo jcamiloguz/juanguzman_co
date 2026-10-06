@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const labels: Record<string, string> = {
@@ -7,17 +8,30 @@ const labels: Record<string, string> = {
   es: "ES",
 };
 
-export default function LangSwitcher({ lang }: { lang: string }) {
+export default function LangSwitcher({
+  lang,
+  translatedSlugs,
+}: {
+  lang: string;
+  translatedSlugs: string[];
+}) {
   const pathname = usePathname();
   const otherLang = lang === "en" ? "es" : "en";
-  const newPath = pathname.replace(`/${lang}`, `/${otherLang}`);
+  let newPath = pathname.replace(new RegExp(`^/${lang}(?=/|$)`), `/${otherLang}`);
+
+  // Posts may not exist in the other language; fall back to the blog index.
+  const post = pathname.match(/^\/[^/]+\/blog\/([^/]+)$/);
+  if (post && !translatedSlugs.includes(post[1])) {
+    newPath = `/${otherLang}/blog`;
+  }
 
   return (
-    <a
+    <Link
       href={newPath}
+      hrefLang={otherLang}
       className="rounded-lg border border-white/10 px-3 py-1.5 text-xs font-medium text-[#fafaf9]/60 transition-colors hover:border-[#c2410c]/50 hover:text-[#c2410c]"
     >
       {labels[otherLang]}
-    </a>
+    </Link>
   );
 }

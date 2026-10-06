@@ -1,16 +1,16 @@
 {
-  "titles": ["Software Engineer", "Coder", "Tech Enthusiast", "Content Creator"],
+  "titles": [
+    "Software Engineer",
+    "Coder",
+    "Tech Enthusiast",
+    "Content Creator"
+  ],
   "about": {
     "heading": "About",
     "text": "Software Engineer with a focus on backend development, microservices architecture, and cloud infrastructure. I enjoy building scalable, reliable systems and contributing to teams that ship quality software."
   },
   "stack": {
     "heading": "Tech Stack"
-  },
-  "newsletter": {
-    "heading": "Stay in the Loop",
-    "text": "Subscribe to get my latest posts on software engineering, backend architecture, and tech straight to your inbox.",
-    "cta": "Subscribe"
   },
   "experience": {
     "heading": "Experience",
@@ -46,5 +46,47 @@
         "location": "Cali, Colombia"
       }
     ]
+  },
+  "meta": {
+    "title": "Juan Guzman — Software Engineer",
+    "description": "Software engineer from Colombia writing about backend development, microservices, cloud infrastructure, and growing as a developer."
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "hero": {
+    "tagline": "I build backend systems for a living and write about what I learn along the way."
+  },
+  "home": {
+    "latest": "Latest posts",
+    "viewAll": "View all posts →",
+    "aboutTeaser": "From a startup in Cali to building distributed systems for global teams. Here’s my story.",
+    "aboutCta": "More about me →"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Notes on backend engineering, cloud infrastructure, and building a career in tech.",
+    "featured": "Latest",
+    "allTags": "All",
+    "minRead": "min read",
+    "backToBlog": "← Back to blog",
+    "readIn": "Leer en español",
+    "empty": "No posts in English yet.",
+    "emptyCta": "Read the Spanish posts →",
+    "newer": "Newer",
+    "older": "Older",
+    "discussOnSubstack": "Join the discussion on Substack →",
+    "rss": "RSS"
+  },
+  "subscribe": {
+    "heading": "Get new posts in your inbox",
+    "text": "I write about software engineering, backend architecture, and tech. No spam, unsubscribe anytime.",
+    "button": "Subscribe on Substack"
+  },
+  "aboutPage": {
+    "title": "About me",
+    "description": "Who I am, how I got here, and what I care about."
   }
 }

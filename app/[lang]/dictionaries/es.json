@@ -1,16 +1,16 @@
 {
-  "titles": ["Ingeniero de Software", "Programador", "Entusiasta Tech", "Creador de Contenido"],
+  "titles": [
+    "Ingeniero de Software",
+    "Programador",
+    "Entusiasta Tech",
+    "Creador de Contenido"
+  ],
   "about": {
     "heading": "Sobre mí",
     "text": "Ingeniero de Software enfocado en desarrollo backend, arquitectura de microservicios e infraestructura en la nube. Disfruto construir sistemas escalables y confiables, y contribuir a equipos que entregan software de calidad."
   },
   "stack": {
     "heading": "Stack Tecnológico"
-  },
-  "newsletter": {
-    "heading": "Mantente al día",
-    "text": "Suscríbete para recibir mis últimos posts sobre ingeniería de software, arquitectura backend y tecnología directo a tu correo.",
-    "cta": "Suscribirse"
   },
   "experience": {
     "heading": "Experiencia",
@@ -46,5 +46,47 @@
         "location": "Cali, Colombia"
       }
     ]
+  },
+  "meta": {
+    "title": "Juan Guzman — Ingeniero de Software",
+    "description": "Ingeniero de software colombiano que escribe sobre desarrollo backend, microservicios, infraestructura en la nube y crecer como desarrollador."
+  },
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "about": "Sobre mí"
+  },
+  "hero": {
+    "tagline": "Construyo sistemas backend y escribo sobre lo que aprendo en el camino."
+  },
+  "home": {
+    "latest": "Últimos posts",
+    "viewAll": "Ver todos los posts →",
+    "aboutTeaser": "De una startup en Cali a construir sistemas distribuidos para equipos globales. Esta es mi historia.",
+    "aboutCta": "Más sobre mí →"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Notas sobre ingeniería backend, infraestructura en la nube y construir una carrera en tecnología.",
+    "featured": "Lo más reciente",
+    "allTags": "Todos",
+    "minRead": "min de lectura",
+    "backToBlog": "← Volver al blog",
+    "readIn": "Read in English",
+    "empty": "Aún no hay posts en español.",
+    "emptyCta": "Lee los posts en inglés →",
+    "newer": "Más reciente",
+    "older": "Anterior",
+    "discussOnSubstack": "Únete a la conversación en Substack →",
+    "rss": "RSS"
+  },
+  "subscribe": {
+    "heading": "Recibe los nuevos posts en tu correo",
+    "text": "Escribo sobre ingeniería de software, arquitectura backend y tecnología. Sin spam, cancela cuando quieras.",
+    "button": "Suscríbete en Substack"
+  },
+  "aboutPage": {
+    "title": "Sobre mí",
+    "description": "Quién soy, cómo llegué aquí y lo que me importa."
   }
 }
